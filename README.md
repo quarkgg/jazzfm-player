@@ -4,13 +4,16 @@ A basic Python app.
 
 ## Setup
 
-`sudo dnf install python3-pyside6`  # system Qt 6 (KDE-native), no pip needed
+No manual dependencies to install — the RPM declares them and dnf
+resolves them automatically (system Qt 6 via `python3-pyside6`,
+GStreamer plugins for streaming; KDE-native, no pip needed).
 
 ## Build & install (RPM)
 
 ```bash
-./build-rpm.sh            # rpmbuild needs python3-rpm-macros (dnf install python3-rpm-macros)
-sudo rpm -Uvh ~/rpmbuild/RPMS/noarch/jazzfm-player-*.rpm
+sudo dnf builddep jazzfm-player.spec   # installs build-time deps (python3-rpm-macros)
+./build-rpm.sh
+sudo dnf install ~/rpmbuild/RPMS/noarch/jazzfm-player-*.rpm
 ```
 
 ## Run

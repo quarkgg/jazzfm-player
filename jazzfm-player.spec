@@ -1,13 +1,17 @@
 Name:           jazzfm-player
 Version:        0.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Minimal Jazz FM stream player for KDE (PySide6)
 License:        Copyright (c) 2026 chadela
 BuildArch:      noarch
 
 Source0:          %{name}-%{version}.tar
 
+BuildRequires:  python3-rpm-macros
+
 Requires:       python3-pyside6
+Requires:       gstreamer1-plugins-base
+Requires:       gstreamer1-plugins-good
 
 %description
 Minimal Jazz FM radio player: play/pause/stop the live stream, minimize to
@@ -41,5 +45,7 @@ install -m 644 jazzfm-player.desktop %{buildroot}%{_datadir}/applications/jazzfm
 %{_datadir}/applications/jazzfm-player.desktop
 
 %changelog
+* Tue Aug 18 2026 chadela - 0.1.0-2
+- Declare runtime and build dependencies for automatic dnf resolution
 * Tue Aug 18 2026 chadela - 0.1.0-1
 - Initial RPM packaging

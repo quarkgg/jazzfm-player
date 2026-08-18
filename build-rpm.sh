@@ -16,4 +16,4 @@ find "$stage" -type d -name __pycache__ -prune -exec rm -rf {} +
 tar -C "$stage" -cf "$topdir/SOURCES/$name-$version.tar" "$name-$version"
 
 rpmbuild -bb --define "_topdir $topdir" "$name.spec"
-echo "Built: $topdir/RPMS/noarch/$name-$version-1*.noarch.rpm"
+echo "Built: $topdir/RPMS/noarch/$name-$version-*.noarch.rpm"
