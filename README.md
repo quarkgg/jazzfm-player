@@ -1,12 +1,9 @@
 # jazzfm-player
 
-A basic Python app.
+A basic KDE Plasma player for Jazzfm.bg radio. Streams directly the URL https://cdn.btv.bg/radio/jazz-fm.mp3. 
 
 ## Setup
-
-No manual dependencies to install — the RPM declares them and dnf
-resolves them automatically (system Qt 6 via `python3-pyside6`,
-GStreamer plugins for streaming; KDE-native, no pip needed).
+Requires KDE Plasma (tested on Fedora 44). All dependencies are declared in the rpm. Use DNF to install.
 
 ## Build & install (RPM)
 
