@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Jazz FM Player
+Comment=Play Jazz FM (live stream)
+Exec=/usr/bin/jazzfm-player
+Icon=jazzfm-player
+Terminal=false
+Categories=AudioVideo;Player;

@@ -1,0 +1,7 @@
+[project]
+name = "jazzfm-player"
+version = "0.1.0"
+description = "Minimal Jazz FM stream player for KDE (PySide6)."
+readme = "README.md"
+requires-python = ">=3.10"
+# GUI/media deps are system packages, not pip: `sudo dnf install python3-pyside6`
